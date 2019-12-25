@@ -1,1 +1,64 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  overflow: hidden;
+}
+
+.navbar-bg {
+  background-color: lightgrey;
+}
+
+.navbar-brand {
+  display: inline-block;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+  font-size: 1.8rem;
+  line-height: inherit;
+  white-space: nowrap;
+}
+.navbar-light .navbar-brand a:hover {
+  color: whitesmoke;
+}
+
+// Side bar Starts
+.topnav {
+  background-color: darkgoldenrod;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: whitesmoke;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-size: 1.5rem;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  color: lightgray;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: dimgray;
+  color: white;
+}
+
+// Side bar Ends
+
+
+.home {
+  margin-top: 40px;
+  margin-left: 50px;
+}
+
+.overview{
+  margin-top: 40px;
+  margin-left: 50px;
+}
