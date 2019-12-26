@@ -1,3 +1,4 @@
+import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { OverviewService } from 'src/app/services/overview.service';
 
@@ -11,16 +12,24 @@ export class OverviewComponent implements OnInit {
   title = "Overview of messages";
   activeMsg = "No active messages are available";
   overViewData: Object;
-  overViewDetailData: Object;
+  count = 0;
+  username: string;
+  id: number;
+  private sub: any;
 
-  constructor(private overviewService:OverviewService) { }
+  constructor(private overviewService: OverviewService, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
-    this.getOverviewData();
+    this.sub = this.activatedRoute.params.subscribe(params => {
+      this.username = params['username'];
+      this.id = params['id'];
+      this.getOverviewData();
+    });
+
   }
 
-  getOverviewData(){
-    this.overviewService.getOverviewData().subscribe((res)=>{
+  getOverviewData() {
+    this.overviewService.getOverviewData().subscribe((res) => {
       this.overViewData = res;
     })
   }

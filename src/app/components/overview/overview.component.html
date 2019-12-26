@@ -1,15 +1,13 @@
 <div class="overview">
-  <h3>{{ title }}</h3>
-  <h4>{{ activeMsg }}</h4>
+  <h3>{{ title }} {{ overViewData.length }} </h3>
+  <h4 *ngIf="!overViewData">{{ activeMsg }}</h4>
 </div>
 <div class="row">
   <div class="col-4">
     <ul class="list-group" *ngFor="let data of overViewData; let i = index">
-      <a [routerLink]="['detail',data.id]"
-        ><li class="list-group-item"> {{i+1}}. {{ data.name }}</li>
-        </a
-      >
+      <a [routerLink]="['detail', data.id]">
+        <li class="list-group-item">{{ i + 1 }}. {{ data.name }}</li>
+      </a>
     </ul>
   </div>
 </div>
-
