@@ -13,6 +13,8 @@ import { HistoryComponent } from './components/history/history.component';
 import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { HomeComponent } from './components/home/home.component';
 import { ManagementMessageDetailComponent } from './components/management/management-message-detail/management-message-detail.component';
+import { HttpClientModule } from '@angular/common/http';
+import { OverviewDetailComponent } from './components/overview/overview-detail/overview-detail.component';
 
 @NgModule({
   declarations: [
@@ -25,13 +27,15 @@ import { ManagementMessageDetailComponent } from './components/management/manage
     CreateComponent,
     HistoryComponent,
     HomeComponent,
-    ManagementMessageDetailComponent
+    ManagementMessageDetailComponent,
+    OverviewDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,15 @@
+
+<div class="row">
+    <div class="col-3">
+        <ul class="list-group" *ngFor="let data of overViewDetailServiceldata">
+            <li class="list-group-item">{{data.name}}</li>
+            <li class="list-group-item">{{data.username}}</li>
+            <li class="list-group-item">{{data.email}}</li>
+            <li class="list-group-item">{{data.phone}}</li>
+            <li class="list-group-item">{{data.website}}</li>
+            <li class="list-group-item">{{data.address.street}}</li>
+            <li class="list-group-item">{{data.address.city}}</li>
+          </ul>
+    </div>
+</div>
+<p *ngIf="id">Page: {{ id }}</p>
